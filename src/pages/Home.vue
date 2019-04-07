@@ -1,11 +1,20 @@
 <template>
     <div>
-        <el-menu :default-active="$route.path" mode="horizontal" router>
-            <el-menu-item v-for="(item,index) in $router.options.routes[0].children" :key="item.path" :index="item.path">
-                {{item.name}}
-            </el-menu-item>
-        </el-menu>
-       <router-view></router-view>
+        <div class="search_con">
+            <el-menu :default-active="$route.path" mode="horizontal" router active-text-color="#fd7b3f">
+                <el-menu-item v-for="(item,index) in $router.options.routes[0].children" :key="item.path" :index="item.path">
+                    {{item.name}}
+                </el-menu-item>
+            </el-menu>
+            <div class="contact">
+                <img class="tel" src="../assets/tel.png">
+                <p>
+                    客服电话<br> 400-666-6666
+                </p>
+            </div>
+        </div>
+
+        <router-view></router-view>
     </div>
 </template>
 
@@ -22,5 +31,50 @@ export default {
 </script>
 
 <style>
+.el-menu--horizontal>.el-menu-item.is-active {
+    border-bottom: 4px solid #fd7b3f;
+}
 
+.el-menu--horizontal>.el-menu-item {
+    float: left;
+    height: 60px;
+    width: 90px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 60px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: black;
+}
+
+.el-menu.el-menu--horizontal {
+    border-bottom: solid 1px #e6e6e6;
+    display: inline-block;
+}
+
+
+.contact {
+    position: relative;
+    float: right;
+}
+
+.contact p {
+    display: inline-block;
+    font-size: 14px;
+    color: #ff7b34;
+    vertical-align: middle;
+    padding: 0 20px 0 10px;
+}
+
+ul {
+    margin: 0;
+}
+
+.search_con {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
 </style>
