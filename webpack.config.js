@@ -17,27 +17,27 @@ module.exports = (options = {}) => ({
   },
   module: {
     rules: [{
-      test: /\.vue$/,
-      use: ['vue-loader']
-    },
-    {
-      test: /\.js$/,
-      use: ['babel-loader'],
-      exclude: /node_modules/
-    },
-    {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader']
-    },
-    {
-      test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 10000
-        }
-      }]
-    }
+        test: /\.vue$/,
+        use: ['vue-loader']
+      },
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 10000
+          }
+        }]
+      }
     ]
   },
   plugins: [
@@ -56,7 +56,7 @@ module.exports = (options = {}) => ({
     extensions: ['.js', '.vue', '.json', '.css']
   },
   devServer: {
-    host: '127.0.0.1',
+    host: '192.168.31.98',
     port: 8010,
     proxy: {
       '/api/': {

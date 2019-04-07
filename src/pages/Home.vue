@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div class="search_con">
+        <div v-if="_isMobile()">
+
+        </div>
+        <div class="search_con" v-else>
             <el-menu :default-active="$route.path" mode="horizontal" router active-text-color="#fd7b3f">
                 <el-menu-item v-for="(item,index) in $router.options.routes[0].children" :key="item.path" :index="item.path">
                     {{item.name}}
@@ -21,7 +24,10 @@
 <script>
 export default {
     methods: {
-
+        _isMobile() {
+            let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+            return flag;
+        }
     },
     mounted() {
         console.log(this.$route.path)
