@@ -14,8 +14,8 @@
               <span>时间</span>
               <input type="text" id="txtDemandStartDate" style="width: 80px; background: url() 92% 50% no-repeat;">
               <!--<i>至</i>
-                                                <input type="text" readonly="readonly" id="txtDemandEndDate" style="width: 80px; background: url() 92% 50% no-repeat;">
-                                                <input type="hidden" readonly="readonly" id="txtDays">-->
+                                                  <input type="text" readonly="readonly" id="txtDemandEndDate" style="width: 80px; background: url() 92% 50% no-repeat;">
+                                                  <input type="hidden" readonly="readonly" id="txtDays">-->
             </dd>
             <dd>
               <span>地点</span>
@@ -26,8 +26,8 @@
               </select>
               <i>一</i>
               <!--<select style="width: 102px; background: url() 92% 50% no-repeat;" name="" id="drpDemandCity">
-                                                      <option value="">选择地区</option>
-                                                    </select>-->
+                                                        <option value="">选择地区</option>
+                                                      </select>-->
             </dd>
             <dd>
               <span>人数</span>
@@ -332,5 +332,9 @@ ul {
   border-radius: 5px;
   margin-left: 75px;
   cursor: pointer;
+}
+
+.has-dots {
+  min-width: 1200px!important;
 }
 </style>
